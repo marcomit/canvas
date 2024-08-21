@@ -1,17 +1,10 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/ib492iQGk8U
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 "use client";
 
 import { useState } from "react";
 
 export default function Component() {
   const [selectedColor, setSelectedColor] = useState("#000000");
-  const [boxColors, setBoxColors] = useState<string[]>(
-    Array(200).fill("#aaaaaa")
-  );
+  const [boxColors, setBoxColors] = useState(Array<string>(200).fill("#aaaaaa"));
   const handleBoxClick = (index: number) => {
     const newBoxColors = [...boxColors];
     newBoxColors[index] = selectedColor;
